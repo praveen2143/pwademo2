@@ -1,0 +1,37 @@
+nsetracker
+<head>
+  <meta name="theme-color" content="#317EFB"/>
+</head>
+<div>
+  <mat-table [dataSource]="restItems">
+    <ng-container matColumnDef="symbol">
+      <mat-header-cell *matHeaderCellDef> symbol </mat-header-cell>
+      <mat-cell *matCellDef="let scrip"> {{scrip.symbol}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="open">
+      <mat-header-cell *matHeaderCellDef> open </mat-header-cell>
+      <mat-cell *matCellDef="let scrip"> {{scrip.open}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="high">
+      <mat-header-cell *matHeaderCellDef> high </mat-header-cell>
+      <mat-cell *matCellDef="let scrip"> {{scrip.high}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="low">
+      <mat-header-cell *matHeaderCellDef> low </mat-header-cell>
+      <mat-cell *matCellDef="let scrip"> {{scrip.low}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="ltP">
+      <mat-header-cell *matHeaderCellDef> ltP </mat-header-cell>
+      <mat-cell *matCellDef="let scrip"> {{scrip.ltP}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="ptsC">
+      <mat-header-cell *matHeaderCellDef> ptsC </mat-header-cell>
+      <mat-cell *matCellDef="let scrip"> {{scrip.ptsC}} </mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+  
+</div>
+
+
